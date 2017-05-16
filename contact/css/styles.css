@@ -1,3 +1,86 @@
+/* TOP BAR* */
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great');
+
+.title {
+  font-size: 30px;
+  height: 40px;
+}
+
+.top-bar {
+  height: 120px;
+  background-color:  black;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.home, .search, .contact, .profile {
+  line-height: 120px;
+  z-index: 10;
+}
+
+.home {
+  cursor: pointer;
+  height: 100px;
+  text-align: center;
+  background-image: url("../img/lit-logo-yellow.png");
+  background-size: 200px;
+  background-position: 20px -5px;
+}
+
+.contact, .profile {
+  padding-top: 12px;
+}
+
+.search {
+  text-align: center;
+}
+
+.cont, .prof {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  background-color: white;
+  color: #FFDC00;
+  text-align: center;
+  line-height: 90px;
+  transition: all 0.7s ease;
+  z-index: 2;
+}
+
+.icon-expanded {
+  overflow: hidden;
+  border-radius: 50px;
+  height: 90px;
+  width: 200px;
+  background-color: white;
+  color: #FFDC00;
+  text-align: center;
+  transition: all 0.7s ease;
+}
+
+.cont-uni-words, .prof-uni-words {
+  font-family: 'Fredericka the Great', cursive;
+  display: none;
+  padding-left: 20px;
+  font-size: 30px;
+  line-height: 90px;
+}
+
+.cont-uni-items, .prof-uni-items {
+  font-size: 60px;
+  line-height: 80px;
+}
+
+.prof-uni-items {
+  font-size: 55px;
+  padding-left: 9px;
+  line-height: 80px;
+}
+
+
 ul {
   list-style-type: none;
   margin: 0px;
@@ -29,7 +112,8 @@ li a:hover {
 
 .page-bg {
   background-size: cover;
-  background-position: 0px -100px;
+  background-color: black;
+  background-position: 0px -0px;
   background-position: center;
   backface-visibility: visible;
   transform: scale(1.1);
@@ -39,14 +123,19 @@ li a:hover {
   top: 0;
   left: 0;
   position: fixed;
+  transition: all 0.5s ease;
+  background-image: url("../img/upcoming.jpg")
 }
 
 #map {
   background-color: #008080;
 }
 
+.map-area {
+  border-radius: 10px;
+}
+
 .jumbotron {
-  padding-top: 150px;
   margin-left: 100px;
   margin-right: 100px;
   background: transparent;
@@ -62,7 +151,47 @@ li a:hover {
   color: #00FFFF;
 }
 
-.btn {
+.form-style {
+  background-color: white;
+  height: 280px;
+  width: 450px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.sub-button {
+  background-color: white;
+  border: none;
+}
+
+.sub-button, .sub-button:focus {
+  background-color: #FFDC00;
+  width: 100%;
+  height: 56px;
+  border-radius: 0px 0px 20px 20px;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.sub-button:hover {
+  background-color: #3D9970;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.sub-button:active {
+  background-color: #33805d;
+}
+
+.form-padding {
+  padding: 20px;
+}
+
+.bg {
+  transition: all 0.5s ease;
+}
+
+/*.btn {
   background-color: #DAA520;
   cursor: pointer;
-}
+} */

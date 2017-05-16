@@ -1,22 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great');
 
-#place-1 {
-  display: none;
-  width: 100%;
-  height: 300px;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  position: fixed;
-}
-
-/* Page Background */
-.page-bg {
-}
-
-/* */
-
 .title {
   font-size: 30px;
   height: 40px;

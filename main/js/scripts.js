@@ -7,6 +7,7 @@ $(document).ready(function() {
   });
 
   var icons = [".cont", ".prof"];
+  
   icons.forEach(function(icon) {
     $(icon).hover(function() {
       $(icon + "-uni-words").fadeToggle();
