@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great');
+
+#place-1 {
+  display: none;
+  width: 100%;
+  height: 300px;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+/* Page Background */
+.page-bg {
+}
+
+/* */
+
+.title {
+  font-size: 30px;
+  height: 40px;
+}
+
+.top-bar {
+  height: 120px;
+  background-color:  #FFDC00;
+}
+
+.home, .search, .contact, .profile {
+  line-height: 120px;
+}
+
+.home {
+  cursor: pointer;
+  height: 100px;
+  text-align: center;
+  background-image: url("../img/lit-logo-yellow.png");
+  background-size: 200px;
+  background-position: 20px -5px;
+}
+
+.contact, .profile {
+  padding-top: 12px;
+}
+
+.search {
+  text-align: center;
+}
+
+.cont, .prof {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  background-color: white;
+  color: #FFDC00;
+  text-align: center;
+  line-height: 90px;
+  transition: all 0.7s ease;
+}
+
+.icon-expanded {
+  overflow: hidden;
+  border-radius: 50px;
+  height: 90px;
+  width: 200px;
+  background-color: white;
+  color: #FFDC00;
+  text-align: center;
+  transition: all 0.7s ease;
+}
+
+.cont-uni-words, .prof-uni-words {
+  font-family: 'Fredericka the Great', cursive;
+  display: none;
+  padding-left: 20px;
+  font-size: 30px;
+  line-height: 90px;
+}
+
+.cont-uni-items, .prof-uni-items {
+  font-size: 60px;
+  line-height: 80px;
+}
+
+.prof-uni-items {
+  font-size: 55px;
+  padding-left: 9px;
+  line-height: 80px;
+}
