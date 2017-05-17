@@ -1,3 +1,6 @@
+/* ------- STYLING FOR NAVBAR ------- */
+
+
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great');
 
@@ -74,3 +77,5 @@
   padding-left: 9px;
   line-height: 80px;
 }
+
+/* ------- NAVBAR STYLING END ------- */

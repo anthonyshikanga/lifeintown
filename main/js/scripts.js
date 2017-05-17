@@ -1,4 +1,5 @@
-//User Interface
+//------- NAVBAR JS -------//
+
 $(document).ready(function() {
   $("button#smack-1").click(function() {
     $("#place-1").toggle();
@@ -7,7 +8,7 @@ $(document).ready(function() {
   });
 
   var icons = [".cont", ".prof"];
-  
+
   icons.forEach(function(icon) {
     $(icon).hover(function() {
       $(icon + "-uni-words").fadeToggle();
@@ -16,3 +17,5 @@ $(document).ready(function() {
   })
 
 });
+
+//------- NAVBAR JS -------//
