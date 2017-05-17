@@ -61,9 +61,7 @@ $(document).ready(function() {
 
     if($(".search-bar").val() === "") {
       $(".search-match").remove();
-      $("#drop-down-map").removeClass("drop-down-map-shown");
     }
-
   });
 
 

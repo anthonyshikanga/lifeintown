@@ -10,7 +10,7 @@
   z-index: -1;
   top: 0;
   left: 0;
-  position: fixed;
+  position: absolute;
 }
 
 .page-bg {
@@ -150,6 +150,8 @@
 }
 
 .drop-d{
+  top: 0;
+  left: 0;
   width: 100%;
   transition: all 2s ease;
 }
