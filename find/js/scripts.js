@@ -1,4 +1,5 @@
 //Business Logic
+var fixer = 2050;
 
 function Place(name, coordinates, id, n){
   this.name = name;
@@ -20,7 +21,10 @@ function showLocation(element, place) {
   var mapOptions = {center: thisPlace, zoom: 15,};
   var map = new google.maps.Map(mapCanvas, mapOptions);
 
-  var marker = new  google.maps.Marker({position: thisPlace});
+  var marker = new  google.maps.Marker({
+    position: thisPlace,
+    animation:google.maps.Animation.BOUNCE,
+  });
   marker.setMap(map);
 }
 
@@ -32,11 +36,10 @@ $(document).ready(function() {
 
   var matchesFound = [];
 
-
-
   $(".search-bar").on('input', function() {
+    $(".drop-locations").show();
     $(".search-match").remove();
-    var tester = new RegExp($(".search-bar").val(), "gi");
+    var tester = new RegExp($(".search-bar").val() + "+", "i");
     matchesFound = [];
     var notMatched = [];
 
@@ -55,13 +58,18 @@ $(document).ready(function() {
     locations.forEach(function(location) {
       $("." + location.id).click(function() {
         $("#drop-down-map").addClass("drop-down-map-shown");
-        showLocation("drop-down-map", location);
+        $(".drop-locations").hide();
+        setTimeout(function() {
+          showLocation("drop-down-map", location);
+        }, fixer);
+        fixer = 0;
       })
     })
 
     if($(".search-bar").val() === "") {
       $(".search-match").remove();
     }
+
   });
 
 
