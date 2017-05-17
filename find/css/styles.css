@@ -158,3 +158,19 @@
   height: 200px;
   transition: all 2s ease;
 }
+
+.drop-locations {
+  width: 300px;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 25px;
+  overflow: hidden;;
+}
+
+.search-match {
+  height: 50px;
+  width: 100%;
+  border-bottom: 2px solid darkgrey;
+  padding-top: 10px;
+  padding-left: 10px;
+}
