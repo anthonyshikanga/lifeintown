@@ -1,17 +1,22 @@
 //Business Logic
-function doNothing() {
-};
 
-function Loc(name, coordinates){
+function Place(name, coordinates, id){
   this.name = name;
   this.coordinates = coordinates;
+  this.id = id;
 }
 
-var fred = new Loc("Home", [-1.264567, 36.804261]);
+var impala = new Place("Impala Club", [-1.301459, 36.769093], "impala");
+var junction = new Place("Junction Mall", [-1.298140, 36.762118], "junction");
+var prestige = new Place("Prestige Plaza", [-1.300146, 36.787080], "prestige");
+var hub = new Place("The Hub", [-1.319509, 36.704475], "hub");
+var uhuru = new Place("Uhuru Park", [-1.289825, 36.816476], "uhuru");
 
-function firstPlace(element) {
+var locations = [impala, junction, prestige, hub, uhuru];
+
+function showLocation(element, place) {
   var mapCanvas = document.getElementById(element);
-  var thisPlace = new google.maps.LatLng(fred.coordinates[0], fred.coordinates[1]);
+  var thisPlace = new google.maps.LatLng(place.coordinates[0], place.coordinates[1]);
   var mapOptions = {center: thisPlace, zoom: 15,};
   var map = new google.maps.Map(mapCanvas, mapOptions);
 
@@ -21,11 +26,26 @@ function firstPlace(element) {
 
 //User Interface
 $(document).ready(function() {
-  $("button#smack-1").click(function() {
-    $("#place-1").toggle();
-    firstPlace("place-1");
-    $("#place-1").css("position", "fixed");
-  });
+  $("form#search-form").submit(function(event) {
+    event.preventDefault();
+  })
+
+  locations.forEach(function(location) {
+    $("button#" + location.id).click(function() {
+      showLocation("drop-down-map", location);
+      $("#drop-down-map").toggleClass("drop-down-map-shown");
+    });
+  })
+
+
+  /*for(var i = 0; i < locations.length; i++) {
+    alert(i)
+    $("button#"+locations[i].id).click(function() {
+      alert(i);
+      showLocation("drop-down-map", locations[i]);
+      $("#drop-down-map").addClass("drop-down-map-shown");
+    });
+  } */
 
   var icons = [".cont", ".prof"];
   icons.forEach(function(icon) {
