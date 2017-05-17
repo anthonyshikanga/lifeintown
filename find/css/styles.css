@@ -155,7 +155,7 @@
 }
 
 .drop-down-map-shown {
-  height: 200px;
+  height: 500px;
   transition: all 2s ease;
 }
 
@@ -168,9 +168,17 @@
 }
 
 .search-match {
+  cursor: pointer;
   height: 50px;
   width: 100%;
   border-bottom: 2px solid darkgrey;
   padding-top: 10px;
   padding-left: 10px;
+  text-align: center;
+}
+
+.search-match:hover {
+  background-color: #33805d;
+  color: white;
+  transition: all 0.3s ease;
 }
