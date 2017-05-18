@@ -16,14 +16,13 @@
 .page-bg {
   width: 100%;
   height: 100%;
-  background-image: url("../img/upcoming.jpg");
+  background-image: url("../img/rave-bg-2.jpg");
   background-color: white;
   background-size: cover;
-  z-index: -2;
+  z-index: -5;
   top: 0;
   left: 0;
   position: fixed;
-  filter: blur(4px);
   transform: scale(1.1);
 }
 
@@ -124,7 +123,7 @@
   border-radius: 50px;
   height: 90px;
   width: 200px;
-  background-color: #FFDC00;
+  background-color: #33805d;
   color: white;
   text-align: center;
   transition: all 0.7s ease;
@@ -163,7 +162,7 @@
   background-color: lightgrey;
   height: 500px;
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   transition: all 2s ease;
 }
 
@@ -172,7 +171,8 @@
   background-color: white;
   margin-top: 20px;
   border-radius: 25px;
-  overflow: hidden;;
+  overflow: hidden;
+  z-index: 2;
 }
 
 .search-match {
@@ -191,4 +191,36 @@
   background-color: #FFDC00;
   color: white;
   transition: all 0.3s ease;
+}
+
+.map-display {
+  background-color: #FFDC00;
+  display: none;
+  color: white;
+  font-family: 'Lobster', cursive;
+  letter-spacing: 2px;
+  width: 200px;
+  height: 70px;
+  margin-left: 30px;
+  margin-top: 30px;
+  padding-left: 10px;
+  border-radius: 25px 0px 0px 25px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 21px;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+
+.map-display:hover {
+  background-color: #33805d;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.content {
+  top: 120px;
+  left: 0;
+  position: absolute;
+  z-index: -2;
 }

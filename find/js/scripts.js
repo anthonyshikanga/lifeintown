@@ -18,12 +18,17 @@ var locations = [impala, junction, prestige, hub, uhuru];
 function showLocation(element, place) {
   var mapCanvas = document.getElementById(element);
   var thisPlace = new google.maps.LatLng(place.coordinates[0], place.coordinates[1]);
-  var mapOptions = {center: thisPlace, zoom: 15,};
+  var mapOptions = {
+    center: thisPlace,
+    zoom: 15,
+    mapTypeControl: false,
+    streetViewControl: false,
+   };
   var map = new google.maps.Map(mapCanvas, mapOptions);
 
   var marker = new  google.maps.Marker({
     position: thisPlace,
-    animation:google.maps.Animation.BOUNCE,
+    animation: google.maps.Animation.BOUNCE,
   });
   marker.setMap(map);
 }
@@ -57,13 +62,20 @@ $(document).ready(function() {
 
     locations.forEach(function(location) {
       $("." + location.id).click(function() {
+        $("#drop-down-map").show();
         $("#drop-down-map").addClass("drop-down-map-shown");
         $(".drop-locations").hide();
         setTimeout(function() {
           showLocation("drop-down-map", location);
+          $(".map-display").fadeIn();
         }, fixer);
         fixer = 0;
       })
+    })
+
+    $(".map-display").click(function() {
+      $("#drop-down-map").hide();
+      $(".map-display").slideUp();
     })
 
     if($(".search-bar").val() === "") {
@@ -71,20 +83,6 @@ $(document).ready(function() {
     }
 
   });
-
-
-
-  /*for(var i = 0; i < locations.length; i++) {
-    alert(i)
-    $("button#"+locations[i].id).click(function() {
-      alert(i);
-      showLocation("drop-down-map", locations[i]);
-      $("#drop-down-map").addClass("drop-down-map-shown");
-    });
-  } */
-
-
-
 
   var icons = [".cont", ".prof"];
   icons.forEach(function(icon) {
