@@ -1,8 +1,32 @@
-/* ------- STYLING FOR NAVBAR ------- */
-
+/* ----------------NAVBAR STYLING ----------------- */
+/*------------------------------------------------- */
 
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Fredericka+the+Great');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+#place-1 {
+  display: none;
+  width: 100%;
+  height: 300px;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.page-bg {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/rave-bg-2.jpg");
+  background-color: white;
+  background-size: cover;
+  z-index: -5;
+  top: 0;
+  left: 0;
+  position: fixed;
+  transform: scale(1.1);
+}
 
 .title {
   font-size: 30px;
@@ -11,20 +35,21 @@
 
 .top-bar {
   height: 120px;
-  background-color:  #FFDC00;
 }
 
 .home, .search, .contact, .profile {
-  line-height: 120px;
+
 }
 
 .home {
   cursor: pointer;
   height: 100px;
   text-align: center;
-  background-image: url("../img/lit-logo-yellow.png");
-  background-size: 200px;
-  background-position: 20px -5px;
+  background-image: url("../img/lit-logo-2.0.png");
+  background-size: 150px;
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  background-position: 15px -20px;
 }
 
 .contact, .profile {
@@ -32,7 +57,51 @@
 }
 
 .search {
+  padding-left: 100px;
+  padding-top: 35px;
+}
+
+.search-bar {
+  background-color: white;
+  height: 40px;
+  width: 300px;
+  border: none;
+  border-radius: 25px 0px 0px 25px;
+/*  box-shadow: 7px 8px 15px 0.2px lightgrey; */
+}
+
+.search-bar:focus {
+  outline: none;
+}
+
+.search-butt {
+  cursor: pointer;
+  background-color: #FFDC00;
+  color: white;
+  border-radius: 0px 25px 25px 0px;
+  height: 40px;
+  width: 150px;
+  line-height: 40px;
   text-align: center;
+  font-size: 16px;
+  font-family: 'Lobster', cursive;
+  letter-spacing: 2px;
+  border: none;
+  transition: all 0.5s ease;
+}
+
+.search-butt:focus {
+  outline: none;
+}
+
+.search-butt:hover {
+  background-color: #3D9970;
+  transition: all 0.4s ease;
+}
+
+.search-butt:active {
+  background-color: #33805d;
+  transition: all 0s;
 }
 
 .cont, .prof {
@@ -41,8 +110,8 @@
   border-radius: 50%;
   height: 90px;
   width: 90px;
-  background-color: white;
-  color: #FFDC00;
+  background-color: #FFDC00;
+  color: white;
   text-align: center;
   line-height: 90px;
   transition: all 0.7s ease;
@@ -53,14 +122,14 @@
   border-radius: 50px;
   height: 90px;
   width: 200px;
-  background-color: white;
-  color: #FFDC00;
+  background-color: #33805d;
+  color: white;
   text-align: center;
   transition: all 0.7s ease;
 }
 
 .cont-uni-words, .prof-uni-words {
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Lobster', cursive;
   display: none;
   padding-left: 20px;
   font-size: 30px;
@@ -78,4 +147,85 @@
   line-height: 80px;
 }
 
-/* ------- NAVBAR STYLING END ------- */
+.drop-d{
+  top: 1;
+  left: 0;
+  width: 70%;
+  height: 20px;
+  margin-left: 15%;
+  border-radius: 25px;
+  transition: all 2s ease;
+}
+
+.drop-down-map-shown {
+  background-color: lightgrey;
+  height: 500px;
+  position: absolute;
+  z-index: -4;
+  transition: all 2s ease;
+}
+
+.drop-locations {
+  width: 300px;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 25px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.search-match {
+  cursor: pointer;
+  height: 50px;
+  width: 100%;
+  border-bottom: 2px solid darkgrey;
+  padding-top: 10px;
+  padding-left: 10px;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+}
+
+.search-match:hover {
+  background-color: #FFDC00;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.map-display {
+  cursor: pointer;
+  background-color: #FFDC00;
+  display: none;
+  color: white;
+  font-family: 'Lobster', cursive;
+  letter-spacing: 2px;
+  width: 200px;
+  height: 70px;
+  margin-left: 30px;
+  margin-top: 30px;
+  padding-left: 10px;
+  border-radius: 25px 0px 0px 25px;
+  text-align: center;
+  line-height: 70px;
+  font-size: 21px;
+  z-index: -4;
+  position: fixed;
+  transition: all 0.5s ease;
+}
+
+.map-display:hover {
+  background-color: #33805d;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.content {
+  top: 120px;
+  left: 0;
+  position: absolute;
+  z-index: -2;
+}
+
+
+/* ------------------------------------------------ */
+/* ------------------------------------------------ */

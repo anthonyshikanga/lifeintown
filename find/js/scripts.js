@@ -63,6 +63,24 @@ $(document).ready(function() {
     locations.forEach(function(location) {
       $("." + location.id).click(function() {
         $("#drop-down-map").show();
+        $(".lit-stats").show();
+          var ctx = document.getElementById("lit-stats");
+          alert(ctx);
+          var myRadarChart = new Chart(ctx, {
+            type: "pie",
+            data: {
+              labels: ["Red", "Blue", "Yellow"],
+              datasets: [
+                {
+                  data: [300, 50, 100],
+                  backgroundColor: [ "#FF6384","#36A2EB","#FFCE56"]
+                }]
+            },
+            options: {
+              maintainAspectRation: false,
+              padding: 100,
+            }
+          });
         $("#drop-down-map").addClass("drop-down-map-shown");
         $(".drop-locations").hide();
         setTimeout(function() {
@@ -74,7 +92,8 @@ $(document).ready(function() {
     })
 
     $(".map-display").click(function() {
-      $("#drop-down-map").hide();
+      $("#drop-down-map").faeOut();
+      $(".lit-stats").fadeOut();
       $(".map-display").slideUp();
     })
 

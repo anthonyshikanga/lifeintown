@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sample Title</title>
+    <title>Lit Main</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/styles.css" type="text/css" rel="stylesheet">
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnQzSsQywLPCMrVfbbnJjviCf4ukRppUE&callback=doNothing"
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnQzSsQywLPCMrVfbbnJjviCf4ukRppUE&"
   type="text/javascript"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -17,30 +17,57 @@
   <body>
     <!-- HEADER BAR -->
     <div class="container-fluid top-bar">
+      <a href="../main/index.html">
         <div class="col-sm-2 home">
-          <div class="home-icon">
-          </div>
+            <div class="home-icon">
+            </div>
         </div>
+      </a>
       <div class="col-sm-6 search">
-        <div class="search-bar">
+        <form id="search-form">
+          <input class="col-xs-8 search-bar" type="text">
+          <button class="col-xs-3 search-butt" type="submit">Search</button>
+        </form>
+        <br>
+        <br>
+        <div class="drop-locations">
         </div>
       </div>
       <div class="col-sm-2 contact">
-        <div class="container cont">
-          <div class="col-sm-3 cont-uni-items">&#128379;</div>
-          <div class="col-sm-3 cont-uni-words">Contact</div>
-        </div>
+        <a href="../contact/contact.html">
+          <div class="container cont">
+            <div class="col-sm-3 cont-uni-items">&#128379;</div>
+            <div class="col-sm-3 cont-uni-words">Contact</div>
+          </div>
+        </a>
       </div>
       <div class="col-sm-2 profile">
-        <div class="container prof">
-          <div class="col-sm-3 prof-uni-items">&#128100;</div>
-          <div class="col-sm-3 prof-uni-words">Profile</div>
-        </div>
+        <a href="../profile/profile.html">
+          <div class="container prof">
+            <div class="col-sm-3 prof-uni-items">&#128100;</div>
+            <div class="col-sm-3 prof-uni-words">Profile</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="container-fluid map-drop">
+      <div class="col-sm-4 map-display">
+        HIDE MAP
+      </div>
+      <div id="drop-down-map" class="col-sm-8 drop-d">
+      </div>
+    </div>
+    <div class="container-fluid content">
+      <div class="container-fluid image-slider">
+      </div>
+      <div class="container-fluid live-vid">
+      </div>
+      <div class="container-fluid guide">
+      </div>
+      <div class="container-fluid footer">
       </div>
     </div>
     <div class="page-bg">
     </div>
-    <!-- -->
-
   </body>
 </html>

@@ -149,21 +149,32 @@
 }
 
 .drop-d{
-  top: 1;
+  top: 125px;
   left: 0;
   width: 70%;
   height: 20px;
   margin-left: 15%;
   border-radius: 25px;
   transition: all 2s ease;
+  position: absolute;
 }
 
 .drop-down-map-shown {
   background-color: lightgrey;
   height: 500px;
   position: absolute;
-  z-index: -4;
   transition: all 2s ease;
+  z-index: -4;
+  border-radius: 25px 0px 0px 25px;
+}
+
+#lit-stats {
+  display: none;
+  right: 0;
+  height: 20px;
+  border-radius: 0px 25px 25px 0px;
+  position: absolute;
+  z-index: -4;
 }
 
 .drop-locations {
