@@ -162,7 +162,7 @@
   background-color: lightgrey;
   height: 500px;
   position: absolute;
-  z-index: 1;
+  z-index: -4;
   transition: all 2s ease;
 }
 
@@ -172,7 +172,7 @@
   margin-top: 20px;
   border-radius: 25px;
   overflow: hidden;
-  z-index: 2;
+  z-index: 12;
 }
 
 .search-match {
@@ -194,7 +194,9 @@
 }
 
 .map-display {
+  cursor: pointer;
   background-color: #FFDC00;
+  position: absolute;
   display: none;
   color: white;
   font-family: 'Lobster', cursive;
@@ -208,7 +210,7 @@
   text-align: center;
   line-height: 70px;
   font-size: 21px;
-  z-index: 1;
+  z-index: -4;
   transition: all 0.5s ease;
 }
 
