@@ -1,5 +1,5 @@
 //------- NAVBAR JS -------//
-
+alert("0")
 $(document).ready(function() {
   $("button#smack-1").click(function() {
     $("#place-1").toggle();
@@ -19,3 +19,14 @@ $(document).ready(function() {
 });
 
 //------- NAVBAR JS -------//
+alert("1")
+$(".dropdown-content").(function(){
+  $(".innerMap").hide();
+});
+alert("2")
+
+
+ $("button#mapbutton").click(function(){
+   $(".innermap").show();
+ });
+ alert("3")
