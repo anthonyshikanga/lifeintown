@@ -1,0 +1,67 @@
+.thumbnail {
+
+  width: 150px;
+  height: 150px;
+  margin-left: 42%;
+  margin-top: 50px;
+}
+
+body{
+  /*background-image: url(../img/party.jpg);*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color:#2B2D42;
+  color: #FFF000;
+
+}
+
+em {
+  font-weight: bold;
+
+}
+
+h3{
+  margin-left: 45%;
+}
+
+.thumbnail img {
+
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+
+}
+
+
+.saves{
+  padding-left: 10%
+
+
+}
+
+.following{
+  padding-left: 10%
+
+}
+
+.followers {
+  padding-left: 10%
+
+}
+
+
+.row1{
+  margin: 4%;
+
+}
+
+.row2{
+  margin: 4%;
+
+}
+
+.row3{
+  margin: 4%;
+
+}
